@@ -1,0 +1,194 @@
+<div class="wrapper flex flex-1 flex-col overflow-x-hidden">
+    <!--Header-->
+    <div>
+        <nav class="bg-white shadow">
+            <div class="px-4 md:px-16 py-4 flex justify-between items-center">
+                <div class="flex items-center justify-between space-x-3">
+                    <div>
+                        <img src="./assets/icons/logo-text.svg" alt="yassir-logo" class="h-10">
+                    </div>
+                    <div class="w-[2px] h-6 bg-[#D9D9D9]"></div>
+                    <div class="flex flex-col">
+                        <span class="font-semibold text-base">Sheraton hotel</span>
+                        <div class="flex flex-row ">
+                            <img src="./assets/icons/localization.svg" alt="localization">
+                            <address class="text-amber not-italic text-sm font-normal whitespace-nowrap w-36 sm:w-56 overflow-x-hidden text-ellipsis sm:text-clip">Club Des Pins - Alger </address>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex">
+                    <button type="button" class="p-3 bg-[#F9F9F9] rounded-full focus:outline-none hover:opacity-70" aria-label="toggle menu">
+                        <img src="./assets/icons/menu.svg" alt="menu">
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--Page Content-->
+    <div class="md:mx-16">
+        <!--Tab-->
+        <div class="flex flex-col">
+            <!--Tab Header-->
+            <div class="relative mt-4 w-fit mx-2 md:mx-0 rounded-full">
+                <!--Tab Header-->
+                <div class="flex flex-row bg-[#F2F2F2] border-[#E9E9E9] border h-14 w-fit rounded-full">
+                    <div #tab class="flex justify-center w-[160px] px-8 py-3 rounded-full cursor-pointer">
+                        <!-- Note: We can change the Router Link Style switch to the active link by using 'routerLinkActive="ClassName"', (in the real world scenario) -->
+                        <span [routerLink]="" class="text-lg font-medium text-text-black z-10">Course</span>
+                    </div>
+                    <div #tab class="flex justify-center w-[160px] px-8 py-3 rounded-full cursor-pointer">
+                        <!-- Note: We can change the Router Link Style switch to the active link by using 'routerLinkActive="ClassName"', (in the real world scenario) -->
+                        <span [routerLink]="" class="text-lg font-medium text-text-black z-10">Historique</span>
+                    </div>
+                </div>
+                <!--Indicator-->
+                <div #indicator class="absolute left-0 top-0 w-[162px] transition-all h-14 bg-white rounded-full shadow-sm"></div>
+            </div>
+            <!--Tab Body-->
+            <div class="flex flex-1 flex-wrap py-2 space-y-4 sm:space-y-0">
+                <div class="flex flex-col w-full lg:w-[calc(33.33%-24px)] px-3 space-y-3">
+                    <!--New Race-->
+                    <div class="bg-white md:rounded-2xl">
+                        <div class="px-4 pt-4">
+                            <h2 class="text-2xl font-semibold text-text-black">Nouvelle course</h2>
+                        </div>
+                        <!--Customer Informations-->
+                        <div class="flex flex-col space-y-3 p-4">
+                            <span class="text-base font-normal text-text-color">Informations client</span>
+                            <div class="flex flex-wrap justify-between space-y-2 xl:space-y-0">
+                                <div class="flex flex-col w-full xl:w-[calc(50%-6px)]">
+                                    <label class="self-start text-text-black font-semibold" for="lastname">Nom</label>
+                                    <input #firstFocus id="lastname" type="text" placeholder="Zanbaoui" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border-2 border-[#D9D9D9] rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring">
+                                </div>
+                                <div class="flex flex-col w-full xl:w-[calc(50%-6px)]">
+                                    <label class="self-start text-text-black font-semibold" for="firstname">Prénom</label>
+                                    <input id="firstname" type="text" placeholder="Ahmed" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border-2 border-[#D9D9D9] rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring">
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="self-start text-text-black font-semibold" for="phone_number">Numéro de téléphone</label>
+                                <input id="phone_number" type="text" placeholder="Ex; 05 50 60 70 80" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border-2 border-[#D9D9D9] rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring">
+                            </div>
+                        </div>
+                        <!--Trip & Service-->
+                        <div class="flex flex-col space-y-3 p-4">
+                            <span>Trajet et service</span>
+                            <div class="flex flex-col space-y-2">
+                                <label class="self-start text-text-black font-semibold" for="username">Départ & Destination</label>
+                                <!--Departure & Destination-->
+                                <div class="relative border-2 border-[#D9D9D9] h-fit rounded-xl overflow-hidden">
+                                    <div class="flex flex-row space-x-3 p-3">
+                                        <img src="./assets/icons/trip-destination-amber.svg" alt="trip departure">
+                                        <div class="flex flex-col">
+                                            <span class="text-text-color font-normal text-xs">Départ</span>
+                                            <input type="text" value="Position Actuelle" class="border-transparent focus:border-transparent focus:ring-0 h-5 font-normal text-sm p-0 text-amber ">
+                                        </div>
+                                    </div>
+                                    <hr class="border-slate-200 border-t-2 h-0">
+                                    <img class="absolute my-auto top-0 bottom-0 right-5 border-2 border-[#D9D9D9] rounded-full p-2 bg-white" src="./assets/icons/avatar.svg" alt="avatar">
+                                    <div class="flex flex-row space-x-3 p-3">
+                                        <img src="./assets/icons/trip-destination-black.svg" alt="trip destination">
+                                        <div class="flex flex-col">
+                                            <span class="text-text-color font-normal text-xs">Destination</span>
+                                            <input type="text" value="" class="border-transparent focus:border-transparent focus:ring-0 h-5 font-normal text-sm p-0 text-amber">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <div class="flex flex-col space-y-1">
+                                    <span class="font-semibold text-sm">Choix du service:</span>
+                                    <div class="flex flex-col relative w-full h-fit">
+                                        <select name="serviceOption" class="border-2 border-[#D9D9D9] rounded-lg focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring">
+                                            <option value="serviceOption1" class="text-sm font-normal text-[#1B1B1B]">Confort</option>
+                                            <option value="serviceOption1" class="text-sm font-normal text-[#1B1B1B]">Normal</option>
+                                        </select>
+                                        <span class="absolute right-10 h-fit my-auto top-0 bottom-0 text-sm font-semibold">350 DA</span>
+                                    </div>
+                                </div>    
+                                <div class="flex flex-row space-x-3">
+                                    <div class="flex flex-row space-x-1">
+                                        <img src="./assets/icons/person-group-fill.svg" alt="person-group">
+                                        <span>4</span>
+                                    </div>
+                                    <div class="flex flex-row space-x-1">
+                                        <img src="./assets/icons/luggage.svg" alt="person-group">
+                                        <span>3</span>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                        <!--Réservation-->
+                        <div class="flex flex-col space-y-3">
+                            <div class="flex flex-col space-y-3 p-4">
+                                <span class="text-base font-normal text-text-color">Réservation</span>
+                                <div class="flex flex-row justify-between">
+                                    <div class="flex flex-row space-x-2">
+                                        <img src="./assets/icons/calender.svg" alt="booking">
+                                        <span class="text-sm font-semibold text-[#1B1B1B]">Réserver une course à l'avance</span>
+                                    </div>
+                                    <!--Toggle-->
+                                    <div>
+                                        <label for="toogleTwo" class="flex items-center cursor-pointer select-none">
+                                            <div class="relative">
+                                            <input id="toogleTwo" type="checkbox" class="sr-only">
+                                            <div class="w-14 h-5 bg-[#E5E7EB] rounded-full shadow-inner"></div>
+                                            <div class="
+                                                dot
+                                                absolute
+                                                w-7
+                                                h-7
+                                                bg-white
+                                                rounded-full
+                                                shadow-switch-1
+                                                left-0
+                                                -top-1
+                                                transition
+                                                "></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-[15px] border-t-2 border-slate-50">
+                                <button class="w-full h-12 px-4 py-2 tracking-wide text-white capitalize transition-colors duration-200 transform bg-amber rounded-lg focus:outline-none focus:ring focus:ring-[#ffbc7d] focus:ring-opacity-80 font-semibold text-base">
+                                    Commander
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full lg:w-[calc(66.66%-24px)] px-3">
+                    <div class="flex flex-wrap justify-between items-center">
+                        <h3 class="text-2xl font-semibold text-[#1B1B1B]">Courses actives</h3>
+                        <div class="flex flex-row items-center space-x-2">
+                            <span>Trier par: </span>
+                            <select name="orderBy" class="border-transparent focus:border-transparent focus:ring-0 bg-transparent cursor-pointer">
+                                <option value="item1">Item 1</option>
+                                <option value="item2">Item 2</option>
+                                <option value="item3">Item 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--Search-->
+                    <div class="flex flex-wrap h-14">
+                        <div class="relative w-full h-fit">
+                            <input id="username" type="text" placeholder="Rechercher par nom ou numéro de téléphone" class="w-full px-9 py-2 text-gray-700 bg-white border-2 border-[#D9D9D9] rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring">
+                            <img class="absolute left-3 my-auto top-0 bottom-0" src="./assets/icons/search.svg" alt="search active races">
+                        </div>
+                    </div>
+                    <!--Content-->
+                    <div class="flex flex-col flex-1 items-center justify-between space-y-2">
+                        <img src="./assets/icons/placeolder.svg" alt="placeolder" class="w-44 h-40 mt-12">
+                        <div class="flex flex-col items-center space-y-1">
+                            <span class="font-bold text-[22px]">Aucune course active</span>
+                            <p class="font-normal text-base text-center text-[#5A5A5A]">Une fois ajoutées, les courses apparaitront instantanément ici</p>
+                        </div>
+                        <img src="./assets/icons/trees.svg" alt="no-races">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

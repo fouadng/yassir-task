@@ -1,0 +1,43 @@
+<div class="bg-white md:bg-transparent relative flex flex-1 flex-col items-center justify-between overflow-hidden">
+    <div class="flex flex-col w-full md:w-[418px] z-10 justify-center items-center bg-white my-auto mx-auto px-6 py-8 rounded-3xl space-y-4 shadow-none md:shadow-lg">
+        <img src="./assets/icons/logo-text.svg" alt="yassir-logo" class="h-14">
+        <div class="flex flex-col text-center">
+            <h2 class="font-bold text-[22px] text-black">Connexion</h2>
+            <h3 class="text-base text-black">Se connecter à YASSIR pour Business</h3>
+        </div> 
+        <!--Form-->
+        <div class="flex flex-col w-full">
+            <form class="space-y-4"> 
+                <div class="flex flex-col relative w-full h-fit">
+                    <input #firstFocus id="username" type="text" placeholder="Example@company.com" class="w-full px-9 py-2 text-gray-700 bg-white border-2 border-[#D9D9D9] rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring">
+                    <img class="absolute left-3 my-auto top-0 bottom-0" src="./assets/icons/envelope.svg" alt="email">
+                </div>
+                <div class="flex flex-col relative w-full h-fit">
+                    <input #firstFocus id="username" type="text" placeholder="Saisir le mot de passe" class="w-full px-9 py-2 text-gray-700 bg-white border-2 border-[#D9D9D9] rounded-md focus:border-primary focus:ring-primary focus:ring-opacity-40 focus:outline-none focus:ring">
+                    <img class="absolute left-3 my-auto top-0 bottom-0" src="./assets/icons/lock.svg" alt="lock">
+                    <img class="absolute right-3 my-auto top-0 bottom-0" src="./assets/icons/show.svg" alt="show password">
+                </div>
+                <button [routerLink]="['/main']" class="w-full h-12 px-4 py-2 font-medium tracking-wide text-white bg-primary rounded-lg">
+                    Se connecter
+                </button>
+            </form>
+        </div>
+        <hr class="w-[calc(100%-20%)]">
+        <a href="#">Mot de passe oublié?</a>
+        <hr class="w-24">
+        <div class="flex flex-row space-x-2">
+            <img src="./assets/icons/phone.fill.svg" alt="contact">
+            <b class="text-text-color">Contactez-nous</b>
+            <b class="text-black">0782 82 82 82</b>
+        </div>
+    </div>
+
+    <div>
+        <img src="./assets/icons/polygon-3.svg" class="absolute right-56 -bottom-40 rotate-[-105deg]">
+        <img src="./assets/icons/polygon-5.svg" class="absolute left-2 -bottom-40 rotate-[-105deg]">
+    </div>
+
+    <div class="my-4">
+        <span>© 2011 YASSIR Tous droits réservés</span>
+    </div>
+</div>
